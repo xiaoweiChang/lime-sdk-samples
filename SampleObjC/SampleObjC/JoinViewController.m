@@ -8,10 +8,10 @@
 #import "JoinViewController.h"
 #import "HLServerClient.h"
 #import "CallManager.h"
-#import <HLSDK/HLSDK.h>
+#import <HLSDK.h>
 
 NSString* const kDefaultUserName = @"small_u13";
-NSString* const kHLApiKey = @"[YOUR_HL_API_KEY]";
+NSString* const kHLApiKey = @"9BoKBM2MQ27nPdHW0XckRw";
 
 @interface JoinViewController () <HLClientDelegate>
 @property (nonatomic, retain) IBOutlet UITextField *gssServerURLTextField;

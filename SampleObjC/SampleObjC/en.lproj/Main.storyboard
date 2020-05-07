@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vso-og-3gy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vso-og-3gy">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,8 +110,6 @@
                                     <constraint firstAttribute="trailing" secondItem="zwi-qZ-XGW" secondAttribute="trailing" id="kvd-KE-Jtf"/>
                                     <constraint firstItem="zwi-qZ-XGW" firstAttribute="leading" secondItem="Q0U-aQ-5ga" secondAttribute="leading" id="pBp-87-drT"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="YDb-qO-h7V"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="S0Y-cZ-4dW"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -293,8 +291,6 @@
                                     <constraint firstAttribute="bottom" secondItem="8t0-Pu-529" secondAttribute="bottom" id="cGH-Kz-p6w"/>
                                     <constraint firstItem="8t0-Pu-529" firstAttribute="leading" secondItem="5B8-7U-RNV" secondAttribute="leading" id="uMp-YG-vPc"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="h6U-uJ-77W"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="uMa-7g-pks"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -589,8 +585,6 @@
                                     <constraint firstAttribute="trailing" secondItem="ng2-zt-xcD" secondAttribute="trailing" id="gx5-2e-QRn"/>
                                     <constraint firstAttribute="bottom" secondItem="9Y8-gx-DAv" secondAttribute="bottom" id="v1D-KX-eMO"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="EPo-S9-lJX"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="Wfc-j2-fXd"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
