@@ -11,7 +11,7 @@
 #import <HLSDK.h>
 
 NSString* const kDefaultUserName = @"small_u13";
-NSString* const kHLApiKey = @"9BoKBM2MQ27nPdHW0XckRw";
+NSString* const kHLApiKey = @"77ed5850e042cfab6a84b2f2d7541585";
 
 @interface JoinViewController () <HLClientDelegate>
 @property (nonatomic, retain) IBOutlet UITextField *gssServerURLTextField;
@@ -86,7 +86,7 @@ NSString* const kHLApiKey = @"9BoKBM2MQ27nPdHW0XckRw";
     self.joinButton.enabled = NO;
     self.indicator.hidden = NO;
     [HLClient.sharedInstance startCall:call withPresentingViewController:self].then(^id(id value) {
-        NSLog(@"The call has started");
+        NSLog(@"The call has started : %@", value);
         return value;
     }).catch(^(NSError* error) {
         NSLog(@"Cannot start the call:%@", error);
