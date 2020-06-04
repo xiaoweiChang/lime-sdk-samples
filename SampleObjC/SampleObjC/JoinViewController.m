@@ -8,7 +8,8 @@
 #import "JoinViewController.h"
 #import "HLServerClient.h"
 #import "CallManager.h"
-#import <HLSDK.h>
+#import <HLSDK/HLSDK.h>
+//#import <HLSDK.h>
 
 NSString* const kDefaultUserName = @"small_u13";
 NSString* const kHLApiKey = @"77ed5850e042cfab6a84b2f2d7541585";
@@ -86,7 +87,7 @@ NSString* const kHLApiKey = @"77ed5850e042cfab6a84b2f2d7541585";
     self.joinButton.enabled = NO;
     self.indicator.hidden = NO;
     [HLClient.sharedInstance startCall:call withPresentingViewController:self].then(^id(id value) {
-        NSLog(@"The call has started : %@", value);
+        NSLog(@"The call has started");
         return value;
     }).catch(^(NSError* error) {
         NSLog(@"Cannot start the call:%@", error);

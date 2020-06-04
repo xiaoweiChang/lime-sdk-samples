@@ -10,7 +10,7 @@
 #import "CallManager.h"
 
 NSString* const kDefaultServerURL = @"http://192.168.3.3:8777";
-NSString* const kDefaultUserEmail = @"small_u13@helplightning.com";
+NSString* const kDefaultUserEmail = @"small_u2@helplightning.com";
 @interface AuthViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *authButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
