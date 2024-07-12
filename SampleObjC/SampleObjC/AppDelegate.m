@@ -19,10 +19,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    HLLogEnable(YES);
-    HLLogSetLogLevel(HLLogLevelVerbose);
-    HLLogEnableOSLogger();
-    HLLogEnableTTYLogger();
+//    HLLogEnable(YES);
+//    HLLogSetLogLevel(HLLogLevelVerbose);
+//    HLLogEnableOSLogger();
+//    HLLogEnableTTYLogger();
     return YES;
 }
 

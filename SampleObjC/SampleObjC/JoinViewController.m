@@ -265,7 +265,7 @@ NSInteger const kErrorCodeGeneric = kErrorCodeBase + 100;
     FBLPromise* promise = FBLPromise.pendingPromise;
     UIViewController* presentingViewController = (UIViewController*)userInfo[kHLCallPluginPresentingViewController];
     if (!userInfo) {
-        HLLogDebug(@"No presentingViewController");
+//        HLLogDebug(@"No presentingViewController");
         return [FBLPromise resolvedWith:[self errorWithMessage:@"No presentingViewController"]];
     }
     
