@@ -6,10 +6,12 @@ using Android.Content.PM;
 using AndroidX.AppCompat.App;
 using AndroidX.Core.Content;
 using AndroidX.Core.App;
+using Android.Runtime;
 
 namespace HelpLightning.SDK.Sample.Android
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    //[Register("HelpLightning/SDK/Sample/Android/MainActivity", DoNotGenerateAcw = true)]
     public class MainActivity : AppCompatActivity
     {
         String[] mPerms = {
@@ -17,7 +19,8 @@ namespace HelpLightning.SDK.Sample.Android
                 Manifest.Permission.WriteExternalStorage,
                 Manifest.Permission.Camera,
                 Manifest.Permission.RecordAudio,
-                Manifest.Permission.Bluetooth
+                Manifest.Permission.Bluetooth,
+                Manifest.Permission.ReadExternalStorage,
             };
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -62,14 +65,38 @@ namespace HelpLightning.SDK.Sample.Android
                     .SetImage(HelpLightning.SDK.Theme.ImageMainMenu, Resource.Drawable.image_test)
                     .SetImage(HelpLightning.SDK.Theme.imageScreenCaptureButton1, Resource.Drawable.image_test)
                     .SetImage(HelpLightning.SDK.Theme.imageScreenCaptureButton2, Resource.Drawable.image_test2)
-                    .SetImage(HelpLightning.SDK.Theme.imageScreenCaptureButton3, Resource.Drawable.image_test3);
+                    .SetImage(HelpLightning.SDK.Theme.imageScreenCaptureButton3, Resource.Drawable.image_test3)
+                    // 15.2 icons
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageChatAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageSendAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessagePaperClipAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessagePhotoFilmAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageFolderOpenAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageCameraAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageGroupAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageXmarkAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageFileAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessageVideoAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageMessagePDFAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageCallQualityHDAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageCallQualitySDAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageCallQualityAudioPlusAndroid, Resource.Drawable.image_test)
+                    .SetImage(HelpLightning.SDK.Theme.ImageCameraDisabledAndroid, Resource.Drawable.image_test)
+            ;
+
 
             SupportFragmentManager
                 .BeginTransaction()
                 .Replace(Resource.Id.fragment_container, new Authentication())
                 .Commit();
-
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             RequestPermissions();
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
         protected override void OnResume()

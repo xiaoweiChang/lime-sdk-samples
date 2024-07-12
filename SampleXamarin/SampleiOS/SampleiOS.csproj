@@ -27,7 +27,8 @@
         <MtouchLink>SdkOnly</MtouchLink>
         <MtouchDebug>true</MtouchDebug>
 <CodesignKey>iPhone Developer</CodesignKey>
-<MtouchSdkVersion>13.4</MtouchSdkVersion>
+<MtouchExtraArgs>--gcc_flags -L/usr/lib/swift --gcc_flags -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator --gcc_flags "-Wl,-rpath -Wl,@executable_path/Frameworks"
+</MtouchExtraArgs>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
         <DebugType>none</DebugType>
@@ -37,6 +38,8 @@
         <WarningLevel>4</WarningLevel>
         <MtouchLink>None</MtouchLink>
         <MtouchArch>x86_64</MtouchArch>
+        <MtouchExtraArgs>--gcc_flags -L/usr/lib/swift --gcc_flags -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator --gcc_flags "-Wl,-rpath -Wl,@executable_path/Frameworks"
+</MtouchExtraArgs>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
         <DebugSymbols>true</DebugSymbols>
@@ -51,16 +54,25 @@
         <CodesignKey>iPhone Developer</CodesignKey>
         <MtouchDebug>true</MtouchDebug>
         <MtouchLink>SdkOnly</MtouchLink>
+        <MtouchExtraArgs>--gcc_flags -L/usr/lib/swift --gcc_flags -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos --gcc_flags "-Wl,-rpath -Wl,@executable_path/Frameworks"</MtouchExtraArgs>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
         <DebugType>none</DebugType>
         <Optimize>true</Optimize>
         <OutputPath>bin\iPhone\Release</OutputPath>
+        <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;</DefineConstants>
+        <DefineConstants></DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
         <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
         <MtouchArch>ARM64</MtouchArch>
         <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <MtouchExtraArgs>--gcc_flags -L/usr/lib/swift --gcc_flags -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos --gcc_flags "-Wl,-rpath -Wl,@executable_path/Frameworks"</MtouchExtraArgs>
+        <RunWithWarnings>true</RunWithWarnings>
+        <PackageSigningKey></PackageSigningKey>
+        <MtouchVerbosity></MtouchVerbosity>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="System" />
@@ -125,6 +137,10 @@
         <ImageAsset Include="Assets.xcassets\Lightning.imageset\IconMask-80HL.png" />
         <ImageAsset Include="Assets.xcassets\Lightning.imageset\Contents.json" />
         <ImageAsset Include="Assets.xcassets\Lightning.imageset\IconMask-120HL.png" />
+        <ImageAsset Include="Assets.xcassets\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\TestIcon.imageset\Contents.json" />
+        <ImageAsset Include="Assets.xcassets\TestIcon.imageset\.DS_Store" />
+        <ImageAsset Include="Assets.xcassets\TestIcon.imageset\Icon20.png" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Assets.xcassets\Lightning.imageset\" />
@@ -163,10 +179,10 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Newtonsoft.Json">
-        <Version>12.0.3</Version>
+        <Version>13.0.3</Version>
       </PackageReference>
       <PackageReference Include="HelpLightning.SDK">
-        <Version>14.6.0</Version>
+        <Version>16.4.1</Version>
       </PackageReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
