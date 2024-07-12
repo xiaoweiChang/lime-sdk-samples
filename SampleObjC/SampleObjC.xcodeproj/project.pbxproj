@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -513,7 +513,7 @@
 				C7B67BB0237D06EB00B6314E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C7B67BB1237D06EB00B6314E /* Build configuration list for PBXNativeTarget "SampleObjC" */ = {
 			isa = XCConfigurationList;
@@ -522,7 +522,7 @@
 				C7B67BB3237D06EB00B6314E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

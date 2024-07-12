@@ -9,6 +9,7 @@
 #import "SessionViewController.h"
 #import <HLSDKCommon/HLSDKCommon.h>
 #import <HLSDK/HLSDK.h>
+//#import <HLSDK.h>
 #import "FBLPromises.h"
 
 #define HL_SESSION_ID       (@"c6d553ed-1feb-4e1c-b1a7-e85a5de04c31")

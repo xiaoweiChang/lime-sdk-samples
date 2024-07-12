@@ -31,6 +31,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DocumentManager.h"
 
 @interface CallManager : NSObject
 + (instancetype) sharedInstance;

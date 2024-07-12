@@ -28,7 +28,7 @@
 #import "HLServerClient.h"
 #import "CallManager.h"
 
-NSString* const kDefaultContactEmail = @"[YOUR_USER_NAME]";
+NSString* const kDefaultContactEmail = @"xiaowei.chang@helplightning.com";
 
 @interface SetupViewController ()
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;

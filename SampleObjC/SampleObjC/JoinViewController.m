@@ -11,10 +11,12 @@
 #import "DocumentManager.h"
 #import <HLSDKCommon/HLSDKCommon.h>
 #import <HLSDK/HLSDK.h>
+//#import <HLSDK.h>
+
 
 //TODO
-NSString* const kDefaultUserName = @"[YOUR_USER_NAME]";
-NSString* const kHLApiKey = @"[YOUR_HL_API_KEY]";
+NSString* const kDefaultUserName = @"xiaowei.chang+1";
+NSString* const kHLApiKey = @"322f43a96e734c4c84283194c5ba8e7e";
 
 NSErrorDomain const kErrorDomain = @"SampleErrorDomain";
 NSInteger const kErrorCodeBase = NSIntegerMin;
@@ -262,12 +264,12 @@ NSInteger const kErrorCodeGeneric = kErrorCodeBase + 100;
         NSLog(@"No userInfo");
         return [FBLPromise resolvedWith:[self errorWithMessage:@"No userInfo"]];
     }
-    FBLPromise* promise = FBLPromise.pendingPromise;
-    UIViewController* presentingViewController = (UIViewController*)userInfo[kHLCallPluginPresentingViewController];
     if (!userInfo) {
 //        HLLogDebug(@"No presentingViewController");
         return [FBLPromise resolvedWith:[self errorWithMessage:@"No presentingViewController"]];
     }
+    FBLPromise* promise = FBLPromise.pendingPromise;
+    UIViewController* presentingViewController = (UIViewController*)userInfo[kHLCallPluginPresentingViewController];
     
     if (self.sharedDocManager) {
         [self.sharedDocManager tearDown];
@@ -281,8 +283,8 @@ NSInteger const kErrorCodeGeneric = kErrorCodeBase + 100;
         [promise fulfill:dic];
     } completionBlock:^(id result) {
         JoinViewController* strongSelf = weakSelf;
-        [promise reject:[strongSelf errorWithMessage:@"Cancel"]];
         if ([result isKindOfClass:NSError.class]) {
+            [promise reject:[strongSelf errorWithMessage:@"Cancel"]];
             NSLog(@"%@", result);
             if (strongSelf.sharedDocManager) {
                 [strongSelf.sharedDocManager tearDown];
